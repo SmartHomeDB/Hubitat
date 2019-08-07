@@ -10,16 +10,11 @@ metadata {
         capability "Actuator"
         capability "Configuration"
         capability "Refresh"
-        capability "Switch Level"
-        capability "windowShade"
+        //capability "Switch Level"
+        capability "WindowShade"
         capability "Switch"
 
-        fingerprint(
-          profileId:"0104",
-          inClusters:"0000, 0001, 0005, 0004, 0102", 
-          outClusters:"0019", 
-          manufacturer:"SmartHomeDB",
-          model:"093199ff04984948b4c78167c8e7f47e"
+        fingerprint deviceId:"0104", inClusters:"0000, 0001, 0005, 0004, 0102", outClusters:"0019", manufacturer:"SmartHomeDB", model:"093199ff04984948b4c78167c8e7f47e"
         }
     }
 
@@ -78,7 +73,6 @@ metadata {
 
     }
 
-}
 
 
 
@@ -225,7 +219,7 @@ def open() {
 
 
 
-def off() {
+/*def off() {
 
     log.debug "off()"
 
@@ -257,7 +251,7 @@ def on() {
 
     }
 
-}
+}*/
 
 
 def refresh() {
